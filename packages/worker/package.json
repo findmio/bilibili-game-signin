@@ -1,0 +1,19 @@
+{
+	"name": "bilibili-game-signin-worker",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250503.0",
+		"typescript": "^5.5.2",
+		"wrangler": "^4.14.1"
+	},
+	"dependencies": {
+		"ky": "^1.8.1"
+	}
+}
