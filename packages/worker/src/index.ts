@@ -36,6 +36,12 @@ async function signIn(cookie: string, activityId: string) {
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
+		const { pathname } = new URL(request.url);
+		if (pathname === '/trigger_signin') {
+			const { COOKIE, ACTIVITY_ID } = env;
+			await signIn(COOKIE, ACTIVITY_ID);
+			return new Response('触发签到成功');
+		}
 		return new Response('Hello World!');
 	},
 	async scheduled(event, env, ctx) {
