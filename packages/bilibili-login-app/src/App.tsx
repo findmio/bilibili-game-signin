@@ -68,7 +68,7 @@ function App() {
                 loginUrl={qrcodeData?.data?.url || ""}
                 handleRefresh={handleRefresh}
             />
-            <div className="mt-4 text-neutral-50 text-sm">
+            <div className="mt-4 dark:text-neutral-50 text-sm">
                 请使用
                 <span className="text-theme mx-1">哔哩哔哩客户端</span>
                 扫码登录
